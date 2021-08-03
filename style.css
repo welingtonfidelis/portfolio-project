@@ -13,6 +13,7 @@
   --black2: #333;
   --white: #fff;
   --white2: #fff;
+  --button: #2196f3;
 }
 
 .dark {
@@ -20,10 +21,24 @@
   --black2: #444;
   --white: #333;
   --white2: #444;
+  --button: #2196f3;
 }
 
 body {
   overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--black); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--button); 
 }
 
 .container {
@@ -141,7 +156,7 @@ body {
 }
 
 .main .topbar .toggle:hover {
-  color: #2196f3;
+  color: var(--button);
 }
 
 section {
@@ -207,7 +222,7 @@ p {
 }
 
 .btn:hover {
-  background: #2196f3;
+  background: var(--button);
 }
 
 .social-media {
@@ -236,7 +251,7 @@ p {
 }
 
 .social-media li a:hover {
-  background: #2196f3;
+  background: var(--button);
   color: #fff;
 }
 
@@ -447,7 +462,7 @@ p {
 }
 
 .testimonials .content .testimonials-bx:hover > h4 {
-  border-right: 4px solid #2196f3;
+  border-right: 4px solid var(--button);
 }
 
 .testimonials .content .testimonials-bx h4 span {
@@ -521,7 +536,7 @@ p {
 }
 
 .contact .contact-form .row-2 input[type="submit"]:hover {
-  background: #2196f3;
+  background: var(--button);
 }
 
 .copyright {
