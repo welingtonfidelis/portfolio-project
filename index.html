@@ -27,6 +27,8 @@
           <li><a href="#contact" onclick="toggleMenu()">Contact</a>
           </li>
         </ul>
+
+        <div class="theme-switch"></div>
       </div>
       <div class="main">
         <div class="topbar">
@@ -89,7 +91,7 @@
               </p>
             </div>
             <div class="img-bx">
-              <img src="/assets//imgs/user-2.jpg" alt="">
+              <img src="assets/imgs/user-2.jpg" alt="">
             </div>
           </div>
         </section>
@@ -102,7 +104,7 @@
 
           <div class="content">
             <div class="service-bx">
-              <img src="/assets/icon/icon-1.png" alt="">
+              <img src="assets/icon/icon-1.png" alt="">
               <h2>Web Design</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, 
                 ad! Quos error odio tenetur veritatis ea quisquam totam nemo accusantium 
@@ -110,7 +112,7 @@
                 assumenda aspernatur.</p>
             </div>
             <div class="service-bx">
-              <img src="/assets/icon/icon-1.png" alt="">
+              <img src="assets/icon/icon-1.png" alt="">
               <h2>Web Design</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, 
                 ad! Quos error odio tenetur veritatis ea quisquam totam nemo accusantium 
@@ -118,7 +120,7 @@
                 assumenda aspernatur.</p>
             </div>
             <div class="service-bx">
-              <img src="/assets/icon/icon-1.png" alt="">
+              <img src="assets/icon/icon-1.png" alt="">
               <h2>Web Design</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, 
                 ad! Quos error odio tenetur veritatis ea quisquam totam nemo accusantium 
@@ -126,7 +128,7 @@
                 assumenda aspernatur.</p>
             </div>
             <div class="service-bx">
-              <img src="/assets/icon/icon-2.png" alt="">
+              <img src="assets/icon/icon-2.png" alt="">
               <h2>Computer Technician</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, 
                 ad! Quos error odio tenetur veritatis ea quisquam totam nemo accusantium 
@@ -145,7 +147,7 @@
           <div class="content">
             <div class="work-bx">
               <div class="img-bx">
-                <img src="/assets//imgs//project-1.jpg" alt="">
+                <img src="assets//imgs//project-1.jpg" alt="">
               </div>
               <div class="text-bx">
                 <h3>Project 1</h3>
@@ -153,7 +155,7 @@
             </div>
             <div class="work-bx">
               <div class="img-bx">
-                <img src="/assets//imgs//project-2.jpg" alt="">
+                <img src="assets//imgs//project-2.jpg" alt="">
               </div>
               <div class="text-bx">
                 <h3>Project 2</h3>
@@ -161,7 +163,7 @@
             </div>
             <div class="work-bx">
               <div class="img-bx">
-                <img src="/assets//imgs//project-3.jpg" alt="">
+                <img src="assets//imgs//project-3.jpg" alt="">
               </div>
               <div class="text-bx">
                 <h3>Project 3</h3>
@@ -169,7 +171,7 @@
             </div>
             <div class="work-bx">
               <div class="img-bx">
-                <img src="/assets//imgs//project-4.jpg" alt="">
+                <img src="assets//imgs//project-4.jpg" alt="">
               </div>
               <div class="text-bx">
                 <h3>Project 4</h3>
@@ -187,7 +189,7 @@
           <div class="content">
             <div class="testimonials-bx">
               <div class="img-bx">
-                <img src="/assets//imgs/person-1.jpg" alt="">
+                <img src="assets//imgs/person-1.jpg" alt="">
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Corrupti aspernatur, libero magni dolorum quam sit, assumenda pariatur 
@@ -202,7 +204,7 @@
             </div>
             <div class="testimonials-bx">
               <div class="img-bx">
-                <img src="/assets//imgs/person-2.jpg" alt="">
+                <img src="assets//imgs/person-2.jpg" alt="">
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Corrupti aspernatur, libero magni dolorum quam sit, assumenda pariatur 
@@ -217,7 +219,7 @@
             </div>
             <div class="testimonials-bx">
               <div class="img-bx">
-                <img src="/assets//imgs/person-3.jpg" alt="">
+                <img src="assets//imgs/person-3.jpg" alt="">
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Corrupti aspernatur, libero magni dolorum quam sit, assumenda pariatur 
@@ -264,10 +266,12 @@
     </div>
 
     <script>
-      let toggle = document.querySelector(".toggle");
-      let topbar = document.querySelector(".topbar");
-      let navigation = document.querySelector(".navigation");
-      let main = document.querySelector(".main");
+      const toggle = document.querySelector(".toggle");
+      const topbar = document.querySelector(".topbar");
+      const navigation = document.querySelector(".navigation");
+      const main = document.querySelector(".main");
+      const themeSwitch = document.querySelector(".theme-switch");
+      const body = document.querySelector("body");
 
       toggle.onclick = function () {
         toggle.classList.toggle("active");
@@ -277,11 +281,15 @@
       };
 
       function toggleMenu() {
-        let navigation = document.querySelector(".navigation");
-        let main = document.querySelector(".main");
+        const navigation = document.querySelector(".navigation");
+        const main = document.querySelector(".main");
 
         navigation.classList.remove('active');
         main.classList.remove('active');
+      }
+      
+      themeSwitch.onclick = function () {
+        body.classList.toggle("dark");
       }
     </script>
   </body>
